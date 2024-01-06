@@ -8,13 +8,14 @@ namespace Lab5
     class LineOOShape : LineShape
     {
         private Ellipse ell1,ell2;
-        private int ellSize, elloffSet;
+        private int ellSize, elloffSet, strThickness;
 
         public LineOOShape(Canvas canvas) : base(canvas)
         {
             dashArr = new DoubleCollection() { 3, 3 };
             ellSize = 20;
             elloffSet = ellSize / 2;
+            strThickness = 3;
         }
 
         public override void OnMouseDown()
@@ -36,11 +37,11 @@ namespace Lab5
             ell2.Width = ellSize;
 
             ell1.Stroke = Brushes.Black;
-            ell1.StrokeThickness = 3;
+            ell1.StrokeThickness = strThickness;
             ell1.StrokeDashArray = dashArr;
 
             ell2.Stroke = Brushes.Black;
-            ell2.StrokeThickness = 3;
+            ell2.StrokeThickness = strThickness;
             ell2.StrokeDashArray = dashArr;
 
             Canvas.SetLeft(ell1, startPos.X - elloffSet);
