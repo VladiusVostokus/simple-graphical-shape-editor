@@ -7,9 +7,11 @@ namespace Lab5
 {
     class LineShape : Shape
     {
+        private int strThickness;
         public LineShape(Canvas canvas) : base(canvas)
         {
             dashArr = new DoubleCollection() { 3, 3 };
+            strThickness = 3;
         }
 
         private Line l;
@@ -31,7 +33,7 @@ namespace Lab5
             l.X2 = endPos.X - offsetX2;
             l.Y2 = endPos.Y - offsetY2;
             l.Stroke = Brushes.Black;
-            l.StrokeThickness = 3;
+            l.StrokeThickness = strThickness;
             l.StrokeDashArray = dashArr;
         }
 
