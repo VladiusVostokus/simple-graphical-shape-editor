@@ -8,9 +8,11 @@ namespace Lab5
 {
     class EllipseShape : Shape
     {
+        private int strThickness;
         public EllipseShape(Canvas canvas) : base(canvas)
         {
             dashArr = new DoubleCollection() { 3, 3 };
+            strThickness = 3;
         }
 
         private Ellipse ell;
@@ -30,7 +32,7 @@ namespace Lab5
             ell.Width = Math.Abs(endPos.X - startPos.X);
             ell.Height = Math.Abs(endPos.Y - startPos.Y);
             ell.Stroke = Brushes.Black;
-            ell.StrokeThickness = 3;
+            ell.StrokeThickness = strThickness;
             ell.StrokeDashArray = dashArr;
 
             Canvas.SetLeft(ell, Math.Min(endPos.X, startPos.X));
