@@ -1,0 +1,8 @@
+RectShape	251	148	298	196
+RectShape	409	222	481	266
+CubeShape	172	240	240	302
+CubeShape	499	319	454	204
+PointShape	32	117
+PointShape	33	160
+PointShape	91	165
+PointShape	88	120
