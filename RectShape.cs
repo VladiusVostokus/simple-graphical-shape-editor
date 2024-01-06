@@ -8,9 +8,11 @@ namespace Lab5
 {
     class RectShape : Shape
     {
+        private int strThickness;
         public RectShape(Canvas canvas) : base(canvas)
         {
             dashArr = new DoubleCollection() { 3, 3 };
+            strThickness;
         }
 
         private Rectangle rect;
@@ -34,7 +36,7 @@ namespace Lab5
             rect.Width = Math.Abs(endPos.X - startPos.X) * 2;
             rect.Height = Math.Abs(endPos.Y - startPos.Y) * 2;
             rect.Stroke = Brushes.Black;
-            rect.StrokeThickness = 3;
+            rect.StrokeThickness = strThickness;
             rect.StrokeDashArray = dashArr;
 
             Canvas.SetLeft(rect, Math.Min(endPos.X - offsetX1, left));
