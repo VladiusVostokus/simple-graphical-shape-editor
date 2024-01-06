@@ -7,16 +7,20 @@ namespace Lab5
 {
     class PointShape : Shape
     {
+    private int size, strThickness;
         public PointShape(Canvas canvas) : base(canvas)
         {
+            size = 5;
+            strThickness = 3;
+            
         }
         public override void OnMouseDown()
         {
             Ellipse p = new Ellipse()
             {
-                Height = 5,
-                Width = 5,
-                StrokeThickness = 3,
+                Height = size,
+                Width = size,
+                StrokeThickness = strThickness,
                 Stroke = Brushes.Black,
             };
 
